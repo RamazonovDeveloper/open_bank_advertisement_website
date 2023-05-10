@@ -4,6 +4,9 @@ export const data = {
         header_title2:" tezkor xarid!",
         header_text:"50 mln so’mgacha bo’lgan mahsulotlarni boshlang’ich to’lovlarsiz muddatli to’lov asosida xarid qiling",
         header_scan:"Ilovani yuklab olish",
+
+        download_btn:"Ilovani yuklab olish",
+
         section_open_card_header:"OPENCARD bu",
         section_open_card_1_title:"oygacha",
         section_open_card_1_body:"12 oygacha bo’lib to’lash",
@@ -16,7 +19,8 @@ export const data = {
         section_card_1_text:"Toʻlov teng qismlarga boʻlib toʻlanadi. To‘lov muddati hamkorlarimiz shartlariga qarab 3 oydan 12 oygacha",
         section_card_2_title:"Kartaga texnik xizmat ko’rsatish doimo bepul",
         section_card_2_text:"Kartani chiqarish, yetkazib berish, kartani to’ldirish va xabarnoma xizmati butunlay bepul",
-        section_card_3_title:"Yuqori limitlar – 50 mln so’mgacha",
+        section_card_3_title1:"Yuqori limitlar",
+        section_card_3_title2:"– 50 mln so’mgacha",
         section_card_3_text:"O’zingizga qulay hayotdan bahramand bo’lishga imkon bering: sayohat qiling, kiyim javoningizni yangilang, uyingizni ta’mirlang, yangi mebel, qurilmalar yoki maishiy texnika xarid qiling. Endilikda uzoq vaqt pul yig’ishingiz yoki tanlovda o’zingizni cheklashingiz shart emas. Bizda siz 50 mln so’mgacha bo’lgan mahsulotlarni boshlang’ich to’lovsiz xarid qilishingiz mumk",
         section_card_4_title:"Tezkor rasmiylashtirish va karta chiqarish",
         section_card_4_text:"Mobil ilovada ro'yxatdan o'ting va kartaga buyurtma bering, buning uchun pasportingiz seriyasi va raqamini yoki PINFL kiritishingiz kerak bo'ladi. Biz arizangizni tezda ko'rib chiqamiz va virtual to'lov kartasi dan foydalanish imkoniyatini ta'minlaymiz, siz esa darhol xaridlarni amalga oshirishingiz mumkin. Keyinroq plastik kartangiz sizga qulay vaqtda va joyda yetkazib beriladi",
@@ -40,6 +44,9 @@ export const data = {
         header_title2:"без предоплат!",
         header_text:"Приобретайте товары в рассрочку стоимостью до 50 000 000 сумм  без какой-либо предоплаты",
         header_scan:"Скачать приложение",
+
+        download_btn:"Скачать приложение",
+
         section_open_card_header:"OPENCARD это",
         section_open_card_1_title:"месяцев",
         section_open_card_1_body:"Рассрочка от 3 до 12  мес",
@@ -52,7 +59,8 @@ export const data = {
         section_card_1_text:"Оплата производится равными частями. Период погашения рассрочки от 3 до 12 месяцев, в зависимости от условий наших партнеров, товара и его стоимости",
         section_card_2_title:"Обслуживание карты всегда бесплатно",
         section_card_2_text:"Выпуск карты, доставка курьером, пополнение карты и информирование совершенно бесплатно",
-        section_card_3_title:"Высокие лимиты - до 50 млн. сум",
+        section_card_3_title1:"Высокие лимиты",
+        section_card_3_title2:"- до 50 млн. сум",
         section_card_3_text:"Позвольте себе наслаждаться комфортной жизнью сейчас: путешествуйте, обновляйте свой гардероб, сделайте дома ремонт, приобретайте новую мебель, гаджеты или бытовую технику и многое другое. Теперь Вам не нужно долго копить, экономить или ограничивать себя в выборе. У нас Вы сможете приобрести товары стоимостью до 50 млн. сум без какой-либо предоплаты",
         section_card_4_title:"Быстрое оформление и выпуск карты",
         section_card_4_text:"Зарегистрируйтесь в мобильном приложении и закажите карту, для этого потребуется ввести серию и номер паспорта или ПИНФЛ. Мы быстро рассмотрим Вашу заявку и предоставим доступ к виртуальной карте рассрочке, что позволит Вам сразу же совершать покупки. Немного позже курьер доставит Вам пластиковую карту в удобное для Вас время и место.",
@@ -66,9 +74,61 @@ export const data = {
         section_map_text2:"Планируемые регионы охвата",
     
         section_partners_title:"Наши партнеры",
-        section_partners_link:"",
+        section_partners_link:"Все партнеры",
     
         footer_title:"У вас еще остались вопросы?",
         footer_text:"Мы с радостью ответим на них или предоставим необходимую информацию."
       }
 }
+
+
+export const partners = [
+    {
+        id:1,
+        image_url:"/images/partners1.png",
+    },
+    {
+        id:2,
+        image_url:"/images/partners2.png",
+    },
+    {
+        id:3,
+        image_url:"/images/partners4.png",
+    },
+    {
+        id:4,
+        image_url:"/images/partners5.png",
+    },
+    {
+        id:5,
+        image_url:"/images/partners3.png",
+    },
+    {
+        id:6,
+        image_url:"/images/partners6.png",
+    },
+    {
+        id:7,
+        image_url:"/images/partners7.png",
+    },
+    {
+        id:8,
+        image_url:"/images/partners8.png",
+    },
+    {
+        id:9,
+        image_url:"/images/partners2.png",
+    },
+    {
+        id:10,
+        image_url:"/images/partners5.png",
+    },
+    {
+        id:11,
+        image_url:"/images/partners4.png",
+    },
+    {
+        id:12,
+        image_url:"/images/partners6.png",
+    },
+]

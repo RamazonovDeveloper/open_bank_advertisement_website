@@ -187,3 +187,8 @@ body {
     background-position: left top;
   }
 } */
+
+
+.my_link{
+  border-bottom: 1px solid;
+}

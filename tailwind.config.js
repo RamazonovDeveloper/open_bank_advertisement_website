@@ -19,6 +19,7 @@ module.exports = {
         brown_light: "#F0CEAF",
         card_yellow: "#F0CEAF",
         card_violet: "#DCCFE8",
+        text_gray:"#F4F4F5"
       },
     },
     screens: {

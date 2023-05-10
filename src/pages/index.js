@@ -1,6 +1,7 @@
 // import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { data } from "./data";
+import { partners } from "./data"
 
 
 export default function Home() {
@@ -25,9 +26,16 @@ export default function Home() {
     setLang(name);
   };
 
+  const smPartners = partners.slice(0,6)
+  
+  const mdPartners = partners.slice(6,9)
+  
+  const lgPartners = partners.slice(9,12)
+
+
   return (
     <main>
-      <nav className="container flex justify-between items-center pt-[30px] pb-5">
+      <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
         <a href="#">
           <img src="/images/open-card-logo.png" alt="Logo" />
         </a>
@@ -44,7 +52,7 @@ export default function Home() {
             }}
           >
             <img src="/images/Flag.png" alt="RuFlag" />
-            <p className="ml-2">Русский</p>
+            <p className="ml-2 text-[14px] leading-[22px] tracking-[0.01em]">Русский</p>
           </div>
           <div
             className={
@@ -58,7 +66,7 @@ export default function Home() {
             }}
           >
             <img src="/images/bayroq.png" alt="UzFlag" />
-            <p className="ml-2">O'zbek</p>
+            <p className="ml-2 text-[14px] leading-[22px] tracking-[0.01em]">O'zbek</p>
           </div>
         </div>
         <div className="md:hidden flex">
@@ -78,7 +86,7 @@ export default function Home() {
       </nav>
 
       <header className="">
-        <div className="_container">
+        <div className="_container relative">
           <div className="bg-main_violet text-white px-[10px] py-10 rounded-xl sm:px-[16px] sm:pt-[50px] md:pt-[40px] md:px-[20px] lg:pt-[60px] lg:px-[30px] relative overflow-hidden">
             <div className="relative md:w-full  z-10">
               <div className="sm:mb-[390px] md:mb-[60px] lg:mb-[100px]">
@@ -98,7 +106,7 @@ export default function Home() {
                 alt=""
               />
               <a
-                className="scan_btn flex items-center rounded-xl py-5 px-6 pr-4 text-base font-light md:w-fit md:py-2"
+                className="scan_btn flex items-center md:w-[330px] text-text_gray lg:w-[322px] rounded-xl py-5 px-6 pr-4 text-base font-medium leading-[21px] md:py-2 md:px-[28px] "
                 href="#"
               >
                 <img
@@ -111,9 +119,9 @@ export default function Home() {
                   src="/images/footPlay.png"
                   alt=""
                 />
-                <p>{langData.header_scan}</p>
+                <p >{langData.header_scan}</p>
                 <img
-                  className="md:ml-6 hidden md:flex"
+                  className="md:ml-auto md:mr-0 hidden md:flex"
                   src="/images/mainScaner.png"
                   alt=""
                 />
@@ -123,8 +131,17 @@ export default function Home() {
               <img src="/images/mainCardBack.png" className="w-full" alt="" />
             </div>
           </div>
+
+          <div className="absolute top-[160px] -right-[150px] cursor-pointer xl:flex hidden  bg-main_violet rounded-xl p-4 text-text_gray w-[155px] items-center">
+            <img src="/images/download.png" alt="" />
+            <p className="text-[14px] leading-[14px] ml-2 w-[80px]">{langData.download_btn}</p>
+          </div>
         </div>
+
+
       </header>
+
+      
 
       {/* OPEN CARD SECTION */}
       <section className="container">
@@ -214,7 +231,9 @@ export default function Home() {
           >
             <div className="">
               <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px]">
-                {langData.section_card_3_title}
+                {langData.section_card_3_title1}
+                <br />
+                {langData.section_card_3_title2}
               </h2>
               <p className="text-base leading-[21px] font-medium mt-5">
                 {langData.section_card_3_text}
@@ -249,8 +268,8 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-card_violet w-full rounded-xl h-[602px] md:h-[382px] lg:h-[451px] overflow-hidden md:flex md:flex-row-reverse">
-          <div className="md:w-1/2 pt-5 px-[10px] sm:px-5 lg:pt-[30px] xl:px-[30px]">
-            <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px] md:w-3/4">
+          <div className="md:w-1/2 md:pl-[30px] xl:pl-10 pt-5 px-[10px] sm:px-5 lg:pt-[30px] xl:px-[30px]">
+            <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px] md:w-[70%]">
               {langData.section_card_6_title}
             </h2>
             <p className="text-base leading-[21px] font-medium mt-5 md:mt-8">
@@ -273,7 +292,7 @@ export default function Home() {
           src="/images/map.png"
           alt="Uzb Map"
         />
-        <div className="text-base md:absolute md:top-28 left-[50%]">
+        <div className="text-base md:absolute md:top-28 md:left-[calc(50%+30px)] xl:left-[calc(50%+40px)]">
           <div className="flex items-center mb-5">
             <span className="w-5 block h-5 bg-main_violet rounded mr-4"></span>
             <p className="font-medium leading-[20px]">
@@ -288,57 +307,59 @@ export default function Home() {
       </section>
 
       {/* PARTNERS SECTION */}
-      <section className="container">
+      <section className="container mb-[60px]">
         <h2 className="text-[28px] mb-[35px] sm:mb-10  mt-[70px] sm:mt-[90px]  leading-[38px] sm:text-[32px] sm:leading-[43px] lg:mb-[60px]">
           {langData.section_partners_title}
         </h2>
         <div className="w-full grid grid-cols-2 gap-[10px] md:grid-cols-3 md:gap-5 lg:grid-cols-4">
-          <div className="my_card rounded-xl w-full flex h-[130px] ">
-            <img
-              className=" mx-auto my-auto w-[130px] sm:w-[150px]"
-              src="./images/partners1.png"
-              alt=""
-            />
-          </div>
-          <div className="my_card rounded-xl w-full flex h-[130px]">
-            <img
-              className=" mx-auto my-auto w-[130px]"
-              src="./images/partners2.png"
-              alt=""
-            />
-          </div>
-          <div className="my_card rounded-xl w-full flex h-[130px]">
-            <img
-              className=" mx-auto my-auto w-[130px]"
-              src="./images/partners3.png"
-              alt=""
-            />
-          </div>
-          <div className="my_card rounded-xl w-full flex h-[130px]">
-            <img
-              className=" mx-auto my-auto w-[130px]"
-              src="./images/partners4.png"
-              alt=""
-            />
-          </div>
-          <div className="my_card rounded-xl w-full flex h-[130px]">
-            <img
-              className=" mx-auto my-auto w-[130px]"
-              src="./images/partners5.png"
-              alt=""
-            />
-          </div>
+          {
+            smPartners.map((item, index)=> {
+              return<div className="my_card rounded-xl w-full flex h-[130px] " key={index}>
+                <img
+                  className=" mx-auto my-auto w-[130px] sm:w-[150px]"
+                  src={item.image_url}
+                  alt=""
+                />
+              </div>
+            })
+          }
+          {
+            mdPartners.map((item, index)=> {
+              return<div className="my_card rounded-xl w-full h-[130px] hidden md:flex" key={index}>
+                <img
+                  className=" mx-auto my-auto w-[130px] sm:w-[150px]"
+                  src={item.image_url}
+                  alt=""
+                />
+              </div>
+            })
+          }
+          {
+            lgPartners.map((item, index)=> {
+              return<div className="my_card rounded-xl w-full h-[130px] hidden lg:flex" key={index}>
+                <img
+                  className=" mx-auto my-auto w-[130px] sm:w-[150px]"
+                  src={item.image_url}
+                  alt=""
+                />
+              </div>
+            })
+          }
+
+        </div>
+        <div className="w-full flex justify-end">
+          <div className="text-main_violet leading-[21px] pb-1 my_link cursor-pointer mt-5">{langData.section_partners_link}</div>
         </div>
       </section>
 
-      <footer className="container md:h-[283px] lg:h-[375px] relative bg-main_violet md:bg-inherit text-white md:text-black py-[60px] md:py-[26px] rounded-xl rounded-b-none mt-[70px] overflow-hidden">
-        <div className="_container h-full">
-          <div className="md:w-1/2 ml-auto mr-0 h-full flex items-center">
-            <div className="">
+      <footer className="_container h-[480px] md:h-[283px] lg:h-[375px] bg-main_violet md:bg-inherit text-white md:text-black rounded-xl rounded-b-none overflow-hidden md:mb-[30px]">
+        <div className=" h-full relative md:py-[26px]">
+          <div className="md:w-1/2 ml-auto mr-0 h-full flex items-center px-[10px] sm:px-4 md:px-0">
+            <div className="py-[60px]">
               <h2 className="text-[28px] leading-[38px] sm:text-[30px] sm:leading-[40px] font-normal">
                 {langData.footer_title}
               </h2>
-              <div className="mt-[30px] mb-[80px] text-base leading-[21px] font-medium md:mb-0">
+              <div className="mt-[30px] mb-[80px] text-base w-[90%] leading-[21px] font-medium md:mb-0 md:mt-[60px]">
                 <p>{langData.footer_text}</p>
                 <div className="flex mt-[30px]">
                   <img
@@ -367,7 +388,7 @@ export default function Home() {
           <div className="absolute -bottom-[50px] -left-1/3 md:-left-[20px] md:-bottom-[175px] w-[900px] md:hidden">
             <img className="" src="/images/footBack.png" alt="" />
           </div>
-          <div className="absolute w-full top-0 left-0 hidden md:flex -z-10">
+          <div className="absolute w-full h-full top-0 left-0 hidden md:flex -z-10">
             <img className="h-full w-full" src="/images/footBack2x.png" alt="" />
           </div>
         </div>
