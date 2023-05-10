@@ -65,6 +65,7 @@ body {
 }
 
 .my_card5_back_styles {
+  background-color: #EB98C4;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right 0px;
@@ -103,6 +104,12 @@ body {
     background-size: cover;
     background-position: left -80px;
   }
+
+  .my_card5_back_styles {
+    background-image:url("/images/card5BackFigma.png")!important;
+    background-size: 90%;
+    background-position: right bottom;
+  }
 }
 
 
@@ -112,10 +119,10 @@ body {
     background-position: left -150px;
   }
   
-  .my_card5_back_styles {
+  /* .my_card5_back_styles {
     background-size: cover;
-    background-position: right bottom;
-  }
+    background-position: right -20px;
+  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -133,6 +140,11 @@ body {
     background-position: left bottom;
   }
 
+  .my_card5_back_styles {
+    background-size: contain;
+    background-position: right bottom;
+  }
+
   ._container {
     max-width: 1085px;
     padding: 0 1.25rem;
@@ -140,13 +152,9 @@ body {
 }
 
 
-@media screen and (min-width: 640px) {
-  .my_card5_back_styles {
-    background-image:url("/images/card5BackFigma.png")!important;
-    /* background-size: cover; */
-    background-position: right bottom;
-  }
-}
+/* @media screen and (min-width: 640px) {
+  
+} */
 
 /* @media screen and (min-width: 880px) {
   .my_card3_back_styles {
@@ -159,13 +167,16 @@ body {
   ._container {
     padding: 0 1.875rem;
   }
-}
 
-@media screen and (min-width: 1024px) {
   .my_card_back_styles {
     background-size: 100%;
     /* background-repeat: no-repeat; */
     background-position: left top;
+  }
+
+  .my_card5_back_styles {
+    background-size: 90%;
+    background-position: right bottom;
   }
 }
 
