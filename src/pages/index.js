@@ -250,11 +250,11 @@ export default function Home() {
         </div>
         <div className="bg-card_violet w-full rounded-xl h-[602px] md:h-[382px] lg:h-[451px] overflow-hidden md:flex md:flex-row-reverse">
           <div className="md:w-1/2 pt-5 px-[10px] sm:px-5 lg:pt-[30px] xl:px-[30px]">
-            <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px]">
-              {langData.section_card_2_title}
+            <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px] md:w-3/4">
+              {langData.section_card_6_title}
             </h2>
-            <p className="text-base leading-[21px] font-medium mt-5">
-              {langData.section_card_2_text}
+            <p className="text-base leading-[21px] font-medium mt-5 md:mt-8">
+              {langData.section_card_6_text}
             </p>
           </div>
           <div className="mt-14 md:h-full md:w-1/2 md:mt-0 w-full flex justify-center">
