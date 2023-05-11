@@ -12,6 +12,11 @@ export default function Home() {
     let identifyLang = localStorage.getItem("lang");
     console.log("identify Language is :");
     console.log(identifyLang);
+
+    if(!identifyLang){
+      localStorage.setItem("lang", "uz")
+    }
+
     setLang(identifyLang);
 
     setLangData(data[lang]);
