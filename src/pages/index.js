@@ -42,7 +42,7 @@ export default function Home() {
     <main>
       <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
         <a href="#">
-          <img src="/images/open-card-logo.png" alt="Logo" />
+          <img className="w-[100px]" src="/images/open-card-logo.png" alt="Logo" />
         </a>
         <div className="hidden md:flex">
           <div
@@ -293,7 +293,7 @@ export default function Home() {
           {langData.section_map_title}
         </h2>
         <img
-          className="mb-9 mt-1 sm:mb-11"
+          className="mb-9 mt-1 sm:mb-11 md:w-[91%]"
           src="/images/map.png"
           alt="Uzb Map"
         />
