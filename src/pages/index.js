@@ -217,12 +217,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="relative w-full md:w-[calc(50%_-_10px)] bg-card_yellow rounded-xl h-[394px] pt-5 px-[10px] sm:px-5 lg:pt-[30px] xl:px-[30px] overflow-hidden mb-2.5 md:mb-5 md:float-right">
+          <div className="relative w-full md:w-[calc(50%_-_10px)] bg-card_yellow rounded-xl h-[394px] pt-5 lg:pt-[30px] px-[10px] sm:px-5 xl:px-[30px] overflow-hidden mb-2.5 md:mb-5 md:float-right">
             <div className="">
               <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px]">
                 {langData.section_card_2_title}
               </h2>
-              <p className="text-base leading-[21px] font-medium mt-5 md:w-[90%]">
+              <p className="text-base leading-[21px] font-medium mt-5  lg:mt-[30px] md:w-[90%]">
                 {langData.section_card_2_text}
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function Home() {
                 <br />
                 {langData.section_card_3_title2}
               </h2>
-              <p className="text-base leading-[21px] font-medium mt-5">
+              <p className="text-base leading-[21px] font-medium mt-5 lg:mt-[30px]">
                 {langData.section_card_3_text}
               </p>
             </div>
@@ -253,7 +253,7 @@ export default function Home() {
               <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px]">
                 {langData.section_card_4_title}
               </h2>
-              <p className="text-base leading-[21px] font-medium mt-5">
+              <p className="text-base leading-[21px] font-medium mt-5 lg:mt-[30px]">
                 {langData.section_card_4_text}
               </p>
             </div>
@@ -266,7 +266,7 @@ export default function Home() {
               <h2 className="text-[23px] leading-[31px] sm:text-[30px] sm:leading-[40px] lg:text-[32px] lg:leading-[43px]">
                 {langData.section_card_5_title}
               </h2>
-              <p className="text-base leading-[21px] font-medium mt-5">
+              <p className="text-base leading-[21px] font-medium mt-5 lg:mt-[30px]">
                 {langData.section_card_5_text}
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function Home() {
           src="/images/map.png"
           alt="Uzb Map"
         />
-        <div className="text-base md:absolute md:top-28 md:left-[calc(50%+30px)] xl:left-[calc(50%+40px)]">
+        <div className="text-base md:absolute md:top-24 md:left-[calc(50%+30px)] xl:left-[calc(50%+40px)]">
           <div className="flex items-center mb-5">
             <span className="w-5 block h-5 bg-main_violet rounded mr-4"></span>
             <p className="font-medium leading-[20px]">
