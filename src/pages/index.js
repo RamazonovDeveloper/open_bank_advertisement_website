@@ -15,7 +15,9 @@ export default function Home() {
 
     if(!identifyLang){
       localStorage.setItem("lang", "uz")
+      identifyLang = "uz"
     }
+
 
     setLang(identifyLang);
 
