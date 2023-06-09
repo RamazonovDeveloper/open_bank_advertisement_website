@@ -42,6 +42,8 @@ export default function Home() {
 
   return (
     <main>
+      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
       <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
         <a href="#">
           <img className="w-[100px]" src="/images/open-card-logo.png" alt="Logo" />
@@ -144,8 +146,6 @@ export default function Home() {
             <p className="text-[14px] leading-[14px] ml-2 w-[80px]">{langData.download_btn}</p>
           </div>
         </div>
-
-
       </header>
 
       
