@@ -1,5 +1,11 @@
 export const data = {
     uz:{
+        nav_link_1:"korxonalar uchun",
+        nav_link_2:"Banklarga",
+        nav_link_3:"Savdo va xizmat ko'rsatish korxonalari uchun",        
+        nav_link_4:"mijozlarga",
+
+
         header_title1:"Boshlang’ich to’lovlarsiz ",
         header_title2:" tezkor xarid!",
         header_text:"50 mln so’mgacha bo’lgan mahsulotlarni boshlang’ich to’lovlarsiz muddatli to’lov asosida xarid qiling",
@@ -37,9 +43,18 @@ export const data = {
         section_partners_link:"Barchasini ko’rish",
     
         footer_title:"Yana savollar bormi",
-        footer_text:"Biz ularga javob berishdan yoki kerakli ma'lumotlarni taqdim etishdan mamnun bo'lamiz."
+        footer_text:"Biz ularga javob berishdan yoki kerakli ma'lumotlarni taqdim etishdan mamnun bo'lamiz.",
+
+        footer_link_1:"Hamkor bo'ling ",
+        footer_link_2:"Banklar uchun ma'lumot"
     },
     ru:{
+        nav_link_1:"предприятиям",
+        nav_link_2:"Банкам",
+        nav_link_3:"Торговым и сервисным предприятиям",
+        nav_link_4:"клиентам",
+
+
         header_title1:"Мгновенная покупка ",
         header_title2:"без предоплат!",
         header_text:"Приобретайте товары в рассрочку стоимостью до 50 000 000 сумм  без какой-либо предоплаты",
@@ -77,7 +92,10 @@ export const data = {
         section_partners_link:"Все партнеры",
     
         footer_title:"У вас еще остались вопросы?",
-        footer_text:"Мы с радостью ответим на них или предоставим необходимую информацию."
+        footer_text:"Мы с радостью ответим на них или предоставим необходимую информацию.",
+
+        footer_link_1:"Стать партнером",
+        footer_link_2:"Для банков"
       }
 }
 

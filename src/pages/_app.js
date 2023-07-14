@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import '@/styles/App.css'
 import Head from "next/head";
 import Script from 'next/script';
 

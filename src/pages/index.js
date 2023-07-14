@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { data } from "./data";
 import { partners } from "./data"
+import Link from "next/link";
 
 
 export default function Home() {
@@ -17,7 +18,6 @@ export default function Home() {
       localStorage.setItem("lang", "uz")
       identifyLang = "uz"
     }
-
 
     setLang(identifyLang);
 
@@ -39,15 +39,31 @@ export default function Home() {
   
   const lgPartners = partners.slice(9,12)
 
+  
+  const [navbarIsActive, setNavbarActive] = useState(false)
+
+  function handleClick (value) {
+    setNavbarActive(value)
+  }
+
 
   return (
     <main>
       <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
-      <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
-        <a href="#">
-          <img className="w-[100px]" src="/images/open-card-logo.png" alt="Logo" />
-        </a>
+      {/* <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
+        <div className="flex">
+          <a href="#">
+            <img className="w-[100px]" src="/images/open-card-logo.png" alt="Logo" />
+          </a>
+          <div>
+            <ul className="flex uppercase items-center">
+              <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#store">{langData.nav_link_1}</Link></li>
+              <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#bank">{langData.nav_link_2}</Link></li>
+              <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
+            </ul>
+          </div>
+        </div>
         <div className="hidden md:flex">
           <div
             className={
@@ -92,9 +108,96 @@ export default function Home() {
             alt="UzFlag"
           />
         </div>
-      </nav>
+      </nav> */}
 
-      <header className="">
+      <div className="my_navbar">
+        <div className="container flex justify-between items-center pt-6 pb-[10px]">
+
+          <div className="md:hidden cursor-pointer">
+            {
+              navbarIsActive ?
+              <div>
+                <img onClick={() => handleClick(false)} src={"/assets/close.png"} alt="" />
+              </div>
+              :
+              <div>
+                <img onClick={() => handleClick(true)} src={"/assets/menu.png"} alt="" />
+              </div>
+            }
+          </div>
+          <div className="flex">
+            <Link href="/">
+              <img className="w-[100px]" src={"/assets/open_rass_logo.png"} alt="Logo" />
+            </Link>
+
+            <div className="md:flex hidden">
+              <ul className="flex uppercase items-center">
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#store">{langData.nav_link_1}</Link></li>
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#bank">{langData.nav_link_2}</Link></li>
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
+              </ul>
+            </div>
+
+            <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
+              <ul className="flex uppercase">
+                <li className="lg:ml-[60px] mb-3 "><Link href="#store">{langData.nav_link_3}</Link></li>
+                <li className="lg:ml-[60px] mb-3"><Link href="#bank">{langData.nav_link_2}</Link></li>
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          {/* LANGUAGES WITH TEXT */}
+          <div className="hidden md:flex">
+            <div
+              className={
+                lang === "uz"
+                  ? "opacity-50 flex cursor-pointer"
+                  : "flex cursor-pointer"
+              }
+              onClick={() => handleLangClick("ru")}
+            >
+              <img className="w-7 me-2" src={"/assets/Flag.png"} alt="" />
+              <p className="text-base">Русский</p>
+            </div>
+            <div
+              className={
+                lang === "ru"
+                  ? "opacity-50 flex cursor-pointer ml-[30px]"
+                  : "flex cursor-pointer ml-[30px]"
+              }
+              onClick={() => handleLangClick("uz")}
+            >
+              <img className="w-7 me-2" src={"/assets/bayroq.png"} alt="" />
+              <p className="text-base">O'zbek</p>
+            </div>
+          </div>
+
+
+          {/* LANGUAGES WITHOUT TEXT */}
+          <div className="md:hidden flex">
+            <img
+              className={lang != "uz" ? "hidden" : "flex w-6"}
+              onClick={() => setLang("ru")}
+              src={"/assets/Flag.png"}
+              alt="RuFlag"
+            />
+            <img
+              className={lang != "ru" ? "hidden" : "flex w-6"}
+              onClick={() => setLang("uz")}
+              src={"/assets/bayroq.png"}
+              alt="UzFlag"
+            />
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <header className="mt-20">
         <div className="_container relative">
           <div className="bg-main_violet text-white px-[10px] py-10 rounded-xl sm:px-[16px] sm:pt-[50px] md:pt-[40px] md:px-[20px] lg:pt-[60px] lg:px-[30px] relative overflow-hidden">
             <div className="relative md:w-full  z-10">
@@ -362,7 +465,7 @@ export default function Home() {
       <footer className="_container h-[480px] md:h-[283px] lg:h-[375px] bg-main_violet md:bg-inherit text-white md:text-black rounded-xl rounded-b-none overflow-hidden md:mb-[30px]">
         <div className=" h-full relative md:py-[26px]">
           <div className="md:w-1/2 ml-auto mr-0 h-full flex items-center px-[10px] sm:px-4 md:px-0">
-            <div className="py-[60px]">
+            <div className="pt-[60px] pb-[10px]">
               <h2 className="text-[28px] leading-[38px] sm:text-[30px] sm:leading-[40px] font-normal">
                 {langData.footer_title}
               </h2>
@@ -380,7 +483,9 @@ export default function Home() {
                     alt="Tel Icon"
                   />
                   <p>+ 998 00 000 00 00</p>
+
                 </div>
+
               </div>
               <a
                 className="scan_btn flex items-center rounded-xl py-5 px-6 pr-4 text-base font-medium md:hidden"
@@ -390,6 +495,12 @@ export default function Home() {
                 <img className="mr-3" src="/images/footPlay.png" alt="" />
                 <p>{langData.header_scan}</p>
               </a>
+
+              <div className="flex justify-between w-3/4 mt-[80px] text-[#4E0F8A]">
+                <Link className="underline underline-offset-[8px]" href={'/openCard/#store'}>{langData.footer_link_1}</Link>
+                <Link className="underline underline-offset-[8px]" href={'/openCard/#bank'}>{langData.footer_link_2}</Link>
+              </div>
+
             </div>
           </div>
           <div className="absolute -bottom-[50px] -left-1/3 md:-left-[20px] md:-bottom-[175px] w-[900px] md:hidden">
