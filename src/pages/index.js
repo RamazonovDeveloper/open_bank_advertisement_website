@@ -1,9 +1,8 @@
 // import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { data } from "./data";
-import { partners } from "./data"
+import { partners } from "./data";
 import Link from "next/link";
-
 
 export default function Home() {
   const [lang, setLang] = useState("uz");
@@ -13,10 +12,10 @@ export default function Home() {
     let identifyLang = localStorage.getItem("lang");
     console.log("identify Language is :");
 
-    if(!identifyLang || identifyLang != 'uz' || identifyLang != 'ru'){
+    if (!identifyLang || identifyLang != "uz" || identifyLang != "ru") {
       // console.log("salom sanga eee qizgina");
-      localStorage.setItem("lang", "uz")
-      identifyLang = "uz"
+      localStorage.setItem("lang", "uz");
+      identifyLang = "uz";
     }
 
     setLang(identifyLang);
@@ -33,27 +32,28 @@ export default function Home() {
     setLang(name);
   };
 
-  const smPartners = partners.slice(0,6)
-  
-  const mdPartners = partners.slice(6,9)
-  
-  const lgPartners = partners.slice(9,12)
+  const smPartners = partners.slice(0, 6);
 
-  
-  const [navbarIsActive, setNavbarActive] = useState(false)
+  const mdPartners = partners.slice(6, 9);
 
-  function handleClick (value) {
-    setNavbarActive(value)
+  const lgPartners = partners.slice(9, 12);
+
+  const [navbarIsActive, setNavbarActive] = useState(false);
+
+  function handleClick(value) {
+    setNavbarActive(value);
   }
-
 
   return (
     <main>
-      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
-
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN2KQX9"
-      height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PN2KQX9"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
 
       {/* <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
         <div className="flex">
@@ -116,42 +116,68 @@ export default function Home() {
 
       <div className="my_navbar">
         <div className="container flex justify-between items-center pt-6 pb-[10px]">
-
           <div className="md:hidden cursor-pointer">
-            {
-              navbarIsActive ?
+            {navbarIsActive ? (
               <div>
-                <img onClick={() => handleClick(false)} src={"/assets/close.png"} alt="" />
+                <img
+                  onClick={() => handleClick(false)}
+                  src={"/assets/close.png"}
+                  alt=""
+                />
               </div>
-              :
+            ) : (
               <div>
-                <img onClick={() => handleClick(true)} src={"/assets/menu.png"} alt="" />
+                <img
+                  onClick={() => handleClick(true)}
+                  src={"/assets/menu.png"}
+                  alt=""
+                />
               </div>
-            }
+            )}
           </div>
           <div className="flex">
             <Link href="/">
-              <img className="w-[100px]" src={"/assets/open_rass_logo.png"} alt="Logo" />
+              <img
+                className="w-[100px]"
+                src={"/assets/open_rass_logo.png"}
+                alt="Logo"
+              />
             </Link>
 
             <div className="md:flex hidden">
               <ul className="flex uppercase items-center">
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#store">{langData.nav_link_1}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#bank">{langData.nav_link_2}</Link></li>
+                <li className="lg:ml-[60px] md:ml-[40px]">
+                  <Link href="/">{langData.nav_link_4}</Link>
+                </li>
+                <li className="lg:ml-[60px] md:ml-[40px]">
+                  <Link href="/openCard/#store">{langData.nav_link_1}</Link>
+                </li>
+                <li className="lg:ml-[60px] md:ml-[40px]">
+                  <Link href="/openCard/#bank">{langData.nav_link_2}</Link>
+                </li>
               </ul>
             </div>
 
-            <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
+            <div
+              className={
+                !navbarIsActive
+                  ? "my_navbar_links md:hidden"
+                  : "my_navbar_links my_navbar_links-active"
+              }
+            >
               <ul className="flex uppercase">
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
-                <li className="lg:ml-[60px] mb-3 "><Link href="#store">{langData.nav_link_3}</Link></li>
-                <li className="lg:ml-[60px] mb-3"><Link href="#bank">{langData.nav_link_2}</Link></li>
+                <li className="lg:ml-[60px] md:ml-[40px]">
+                  <Link href="/">{langData.nav_link_4}</Link>
+                </li>
+                <li className="lg:ml-[60px] mb-3 ">
+                  <Link href="#store">{langData.nav_link_3}</Link>
+                </li>
+                <li className="lg:ml-[60px] mb-3">
+                  <Link href="#bank">{langData.nav_link_2}</Link>
+                </li>
               </ul>
             </div>
-
           </div>
-
 
           {/* LANGUAGES WITH TEXT */}
           <div className="hidden md:flex">
@@ -179,7 +205,6 @@ export default function Home() {
             </div>
           </div>
 
-
           {/* LANGUAGES WITHOUT TEXT */}
           <div className="md:hidden flex">
             <img
@@ -195,16 +220,13 @@ export default function Home() {
               alt="UzFlag"
             />
           </div>
-
         </div>
       </div>
-
-
 
       <header className="mt-20">
         <div className="_container relative">
           <div className="bg-main_violet text-white px-[10px] py-10 rounded-xl sm:px-[16px] sm:pt-[50px] md:pt-[40px] md:px-[20px] lg:pt-[60px] lg:px-[30px] relative overflow-hidden">
-            <div className="relative md:w-full  z-10">
+            <div className="relative md:w-full z-10">
               <div className="sm:mb-[390px] md:mb-[60px] lg:mb-[100px]">
                 <div className="text-[25px] lg:w-[55%]  uppercase font-light leading-[34px] tracking-[0.035em] sm:text-[32px] sm:leading-[43px]">
                   <h3>{langData.header_title1}</h3>
@@ -217,7 +239,7 @@ export default function Home() {
                 </p>
               </div>
               <img
-                className="mt-4 mb-12 sm:mt-10 sm:absolute top-[190px] left-0 md:w-[351px] lg:w-[416px] md:left-auto md:right-0 md:top-[30px] lg:top-1"
+                className="my_header_card sm:w-[400px] mt-4 mb-12 sm:mt-10 sm:absolute top-[190px] left-0 md:w-[351px] lg:w-[416px] md:left-auto md:right-0 md:top-[30px] lg:top-1"
                 src="/images/mainCard.png"
                 alt=""
               />
@@ -236,13 +258,13 @@ export default function Home() {
                   src="/images/footPlay.png"
                   alt=""
                 />
-                <p >{langData.header_scan}</p>
+                <p>{langData.header_scan}</p>
                 <img
                   className="md:ml-auto md:mr-0 hidden md:flex"
                   src="/images/download_qr_code.png"
                   alt=""
-                  width={'66px'}
-                  height={'66px'}
+                  width={"66px"}
+                  height={"66px"}
                 />
               </a>
             </div>
@@ -251,14 +273,18 @@ export default function Home() {
             </div>
           </div>
 
-          <a href="https://openuz.onelink.me/6W8i/payMerchant" target="_blank" className="absolute top-[160px] -right-[150px] cursor-pointer xl:flex hidden  bg-main_violet rounded-xl p-4 text-text_gray w-[155px] items-center">
+          <a
+            href="https://openuz.onelink.me/6W8i/payMerchant"
+            target="_blank"
+            className="absolute top-[160px] -right-[150px] cursor-pointer xl:flex hidden  bg-main_violet rounded-xl p-4 text-text_gray w-[155px] items-center"
+          >
             <img src="/images/download.png" alt="" />
-            <p className="text-[14px] leading-[14px] ml-2 w-[80px]">{langData.download_btn}</p>
+            <p className="text-[14px] leading-[14px] ml-2 w-[80px]">
+              {langData.download_btn}
+            </p>
           </a>
         </div>
       </header>
-
-      
 
       {/* OPEN CARD SECTION */}
       <section className="container">
@@ -490,9 +516,7 @@ export default function Home() {
                     alt="Tel Icon"
                   />
                   <a href="tel:+998712001545">+ 998 71 200 15 45</a>
-
                 </div>
-
               </div>
               <a
                 className="scan_btn flex items-center rounded-xl py-5 px-6 pr-4 text-base font-medium md:hidden"
@@ -505,17 +529,30 @@ export default function Home() {
               </a>
 
               <div className="flex justify-between w-3/4 mt-[80px] text-[#4E0F8A]">
-                <Link className="underline underline-offset-[8px]" href={'/openCard/#store'}>{langData.footer_link_1}</Link>
-                <Link className="underline underline-offset-[8px]" href={'/openCard/#bank'}>{langData.footer_link_2}</Link>
+                <Link
+                  className="underline underline-offset-[8px]"
+                  href={"/openCard/#store"}
+                >
+                  {langData.footer_link_1}
+                </Link>
+                <Link
+                  className="underline underline-offset-[8px]"
+                  href={"/openCard/#bank"}
+                >
+                  {langData.footer_link_2}
+                </Link>
               </div>
-
             </div>
           </div>
           <div className="absolute z-[0] -bottom-[50px] -left-1/3 md:-left-[20px] md:-bottom-[175px] w-[900px] md:hidden">
             <img className="" src="/images/footBack.png" alt="" />
           </div>
           <div className="absolute w-full h-full top-0 left-0 hidden md:flex -z-10">
-            <img className="h-full w-full" src="/images/footBack2x.png" alt="" />
+            <img
+              className="h-full w-full"
+              src="/images/footBack2x.png"
+              alt=""
+            />
           </div>
         </div>
       </footer>

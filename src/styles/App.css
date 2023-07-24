@@ -690,6 +690,29 @@
         left: -150px!important;
     }
 }
+
+
+@media screen and (min-width:500px) {
+    .my_header_card{
+        left: 10%;
+    }
+}
+
+@media screen and (min-width:570px) {
+    .my_header_card{
+        left: 17%;
+    }
+}
+
+
+@media screen and (min-width:760px) {
+    .my_header_card{
+        left: unset;
+    }
+}
+
+
+
 /*
 @media screen and (min-width:3000px) {
     .map_image{
