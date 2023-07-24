@@ -49,7 +49,7 @@ function App() {
     console.log("identify Language is :");
     console.log(identifyLang);
 
-    if(!identifyLang){
+    if(!identifyLang || identifyLang != 'uz' || identifyLang != 'ru'){
       localStorage.setItem("lang", "uz")
       identifyLang = "uz"
     }
@@ -117,6 +117,13 @@ function App() {
 
   return (
     <div className="relative">
+
+      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
+
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN2KQX9"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
       {/* NAVBAR SECTION START */}
       <div className="my_navbar">
         <div className="container flex justify-between items-center pt-6 pb-[10px]">
@@ -140,17 +147,17 @@ function App() {
 
             <div className="md:flex hidden">
               <ul className="flex uppercase items-center">
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
                 <li className="lg:ml-[60px] md:ml-[40px]"><Link href="#store">{langData.nav_link_1}</Link></li>
                 <li className="lg:ml-[60px] md:ml-[40px]"><Link href="#bank">{langData.nav_link_2}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
               </ul>
             </div>
 
             <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
               <ul className="flex uppercase">
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
                 <li className="lg:ml-[60px] mb-3 "><Link href="#store">{langData.nav_link_3}</Link></li>
                 <li className="lg:ml-[60px] mb-3"><Link href="#bank">{langData.nav_link_2}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
               </ul>
             </div>
 
@@ -530,7 +537,7 @@ function App() {
               </div>
               <div className="flex items-center font-medium">
                 <img className="mr-4" src={"/assets/call.png"} alt="" />
-                <a href="tel:998940073609"> (+998) 94-007-3609</a>
+                <a href="tel:+998940073609"> (+998) 94-007-3609</a>
               </div>
             </div>
           </div>

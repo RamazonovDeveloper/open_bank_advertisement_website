@@ -12,9 +12,9 @@ export default function Home() {
   useEffect(() => {
     let identifyLang = localStorage.getItem("lang");
     console.log("identify Language is :");
-    console.log(identifyLang);
 
-    if(!identifyLang){
+    if(!identifyLang || identifyLang != 'uz' || identifyLang != 'ru'){
+      // console.log("salom sanga eee qizgina");
       localStorage.setItem("lang", "uz")
       identifyLang = "uz"
     }
@@ -51,6 +51,10 @@ export default function Home() {
     <main>
       <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
+
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN2KQX9"
+      height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
+
       {/* <nav className="container flex justify-between items-center pt-[30px] pb-[31.44px]">
         <div className="flex">
           <a href="#">
@@ -132,17 +136,17 @@ export default function Home() {
 
             <div className="md:flex hidden">
               <ul className="flex uppercase items-center">
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
                 <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#store">{langData.nav_link_1}</Link></li>
                 <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/openCard/#bank">{langData.nav_link_2}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
               </ul>
             </div>
 
             <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
               <ul className="flex uppercase">
+                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
                 <li className="lg:ml-[60px] mb-3 "><Link href="#store">{langData.nav_link_3}</Link></li>
                 <li className="lg:ml-[60px] mb-3"><Link href="#bank">{langData.nav_link_2}</Link></li>
-                <li className="lg:ml-[60px] md:ml-[40px]"><Link href="/">{langData.nav_link_4}</Link></li>
               </ul>
             </div>
 
@@ -219,7 +223,8 @@ export default function Home() {
               />
               <a
                 className="scan_btn flex items-center md:w-[330px] text-text_gray lg:w-[322px] rounded-xl py-5 px-6 pr-4 text-base font-medium leading-[21px] md:py-2 md:px-[28px] "
-                href="#"
+                href="https://openuz.onelink.me/6W8i/payMerchant"
+                target="_blank"
               >
                 <img
                   className="mr-2 md:hidden"
@@ -234,8 +239,10 @@ export default function Home() {
                 <p >{langData.header_scan}</p>
                 <img
                   className="md:ml-auto md:mr-0 hidden md:flex"
-                  src="/images/mainScaner.png"
+                  src="/images/download_qr_code.png"
                   alt=""
+                  width={'66px'}
+                  height={'66px'}
                 />
               </a>
             </div>
@@ -244,10 +251,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute top-[160px] -right-[150px] cursor-pointer xl:flex hidden  bg-main_violet rounded-xl p-4 text-text_gray w-[155px] items-center">
+          <a href="https://openuz.onelink.me/6W8i/payMerchant" target="_blank" className="absolute top-[160px] -right-[150px] cursor-pointer xl:flex hidden  bg-main_violet rounded-xl p-4 text-text_gray w-[155px] items-center">
             <img src="/images/download.png" alt="" />
             <p className="text-[14px] leading-[14px] ml-2 w-[80px]">{langData.download_btn}</p>
-          </div>
+          </a>
         </div>
       </header>
 
@@ -393,7 +400,7 @@ export default function Home() {
       </section>
 
       {/* MAP SECTION */}
-      <section className="container md:relative">
+      <section className="container mb-[60px] md:relative">
         <h2 className="text-[28px] mb-[35px]  mt-[70px] sm:mt-[90px]  leading-[38px] sm:text-[32px] sm:leading-[43px] md:mb-20 lg:mb-[60px]">
           {langData.section_map_title}
         </h2>
@@ -417,7 +424,7 @@ export default function Home() {
       </section>
 
       {/* PARTNERS SECTION */}
-      <section className="container mb-[60px]">
+      {/* <section className="container mb-[60px]">
         <h2 className="text-[28px] mb-[35px] sm:mb-10  mt-[70px] sm:mt-[90px]  leading-[38px] sm:text-[32px] sm:leading-[43px] lg:mb-[60px]">
           {langData.section_partners_title}
         </h2>
@@ -460,11 +467,11 @@ export default function Home() {
         <div className="w-full flex justify-end">
           <div className="text-main_violet leading-[21px] pb-1 my_link cursor-pointer mt-5">{langData.section_partners_link}</div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="_container h-[480px] md:h-[283px] lg:h-[375px] bg-main_violet md:bg-inherit text-white md:text-black rounded-xl rounded-b-none overflow-hidden md:mb-[30px]">
         <div className=" h-full relative md:py-[26px]">
-          <div className="md:w-1/2 ml-auto mr-0 h-full flex items-center px-[10px] sm:px-4 md:px-0">
+          <div className="absolute md:static z-10 md:w-1/2  ml-auto mr-0 h-full flex items-center px-[10px] sm:px-4 md:px-0">
             <div className="pt-[60px] pb-[10px]">
               <h2 className="text-[28px] leading-[38px] sm:text-[30px] sm:leading-[40px] font-normal">
                 {langData.footer_title}
@@ -482,14 +489,15 @@ export default function Home() {
                     src="/images/footTelBlack.png"
                     alt="Tel Icon"
                   />
-                  <p>+ 998 00 000 00 00</p>
+                  <a href="tel:+998712001545">+ 998 71 200 15 45</a>
 
                 </div>
 
               </div>
               <a
                 className="scan_btn flex items-center rounded-xl py-5 px-6 pr-4 text-base font-medium md:hidden"
-                href="#"
+                href="https://openuz.onelink.me/6W8i/payMerchant "
+                target="_blank"
               >
                 <img className="mr-2" src="/images/footIos.png" alt="" />
                 <img className="mr-3" src="/images/footPlay.png" alt="" />
@@ -503,7 +511,7 @@ export default function Home() {
 
             </div>
           </div>
-          <div className="absolute -bottom-[50px] -left-1/3 md:-left-[20px] md:-bottom-[175px] w-[900px] md:hidden">
+          <div className="absolute z-[0] -bottom-[50px] -left-1/3 md:-left-[20px] md:-bottom-[175px] w-[900px] md:hidden">
             <img className="" src="/images/footBack.png" alt="" />
           </div>
           <div className="absolute w-full h-full top-0 left-0 hidden md:flex -z-10">
