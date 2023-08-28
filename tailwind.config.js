@@ -33,7 +33,6 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        // DEFAULT: "0.625rem",
         xs: "0.625rem",
         sm: "1rem",
         md: "1.25rem",
@@ -46,8 +45,6 @@ module.exports = {
         md: "768px",
         lg: "1024px",
         xl: "1440px",
-        // xxl:"2000px",
-        // xl: "1200px",
       },
     },
   },

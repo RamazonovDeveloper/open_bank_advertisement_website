@@ -1,152 +1,72 @@
 export const data = {
     uz:{
-        nav_link_1:"korxonalar uchun",
-        nav_link_2:"Banklarga",
-        nav_link_3:"Savdo va xizmat ko'rsatish korxonalari uchun",        
-        nav_link_4:"mijozlarga",
+        nav_link_1:"Maxsulot Haqida",
+        nav_link_2:"Web-Dastur",
+        nav_link_3:"Mobil Dastur",        
+        nav_link_4:"Kompaniya Haqida",
+        nav_link_5:"Aloqa",
 
 
-        header_title1:"Boshlang’ich to’lovlarsiz ",
-        header_title2:" tezkor xarid!",
-        header_text:"50 mln so’mgacha bo’lgan mahsulotlarni boshlang’ich to’lovlarsiz muddatli to’lov asosida xarid qiling",
-        header_scan:"Ilovani yuklab olish",
+        header_title1:"Open Banking Barcha banklar uchun yagona foydalanuvchi interfeysi",
+        header_text:"Open Banking – bu yagona ruxsat nuqtasi orqali har xil banklarning xizmatlaridan foydalanish imkonini taqdim etgan holda, yuridik shaxslar va yakka tartibdagi tadbirkorlarga bank xizmatlarini masofadan koʻrsatishga moʻljallangan omnikanal platforma.",
 
-        download_btn:"Ilovani yuklab olish",
-
-        section_open_card_header:"OPENCARD bu",
-        section_open_card_1_title:"oygacha",
-        section_open_card_1_body:"12 oygacha bo’lib to’lash",
-        section_open_card_2_body:"Tezkor rasmiylashtirish",
-        section_open_card_3_body:"Limit 50 mln so’mgacha",
-        section_open_card_4_body:"Boshlang’ich to’lovlarsiz",
+        section_1_title_1:"Bir nechta internet-banking oʻrniga yagona Web-ilova",
+        section_1_text_1:"“Open Banking” web-ilovasi – bu buxgalteringizning ishini soddalashtiruvchi qulay interfeys. Mazkur interfeys sizni har xil internet-bankinglar orasida almashish zaruratidan xalos etadi, shunchaki bitta ilovaga kirib, barcha hisobvaraqlardan foydalanish imkoniyatiga ega boʻling. Kontragentga, byudjetga, ish haqi loyihasi boʻyicha kompaniya xodimlariga toʻlov topshiriqnomalarini yaratish jarayonini ancha soddalashtiradi.",
+        section_1_title_2:"Kontragentni tekshirish",
+        section_1_text_2:"Shartnoma tuzishdan oldin kontragentning ishonchli ekanligini tekshiring",
+        section_1_title_3:"Yordamchi maʼlumotdan foydalanish",
+        section_1_text_3:"Valyuta kurslari, qayta moliyalash stavkasi, MHTEKM, BHM va boshqa koʻplab maʼlumotlar bir joyda jamlangan",
     
-        section_card_title:"Karta sizga taqdim etayotgan imkoniyatlar",
-        section_card_1_title:"Bo’lib to’lash",
-        section_card_1_text:"Toʻlov teng qismlarga boʻlib toʻlanadi. To‘lov muddati hamkorlarimiz shartlariga qarab 3 oydan 12 oygacha",
-        section_card_2_title:"Kartaga texnik xizmat ko’rsatish doimo bepul",
-        section_card_2_text:"Kartani chiqarish, yetkazib berish, kartani to’ldirish va xabarnoma xizmati butunlay bepul",
-        section_card_3_title1:"Yuqori limitlar",
-        section_card_3_title2:"– 50 mln so’mgacha",
-        section_card_3_text:"O’zingizga qulay hayotdan bahramand bo’lishga imkon bering: sayohat qiling, kiyim javoningizni yangilang, uyingizni ta’mirlang, yangi mebel, qurilmalar yoki maishiy texnika xarid qiling. Endilikda uzoq vaqt pul yig’ishingiz yoki tanlovda o’zingizni cheklashingiz shart emas. Bizda siz 50 mln so’mgacha bo’lgan mahsulotlarni boshlang’ich to’lovsiz xarid qilishingiz mumk",
-        section_card_4_title:"Tezkor rasmiylashtirish va karta chiqarish",
-        section_card_4_text:"Mobil ilovada ro'yxatdan o'ting va kartaga buyurtma bering, buning uchun pasportingiz seriyasi va raqamini yoki PINFL kiritishingiz kerak bo'ladi. Biz arizangizni tezda ko'rib chiqamiz va virtual to'lov kartasi dan foydalanish imkoniyatini ta'minlaymiz, siz esa darhol xaridlarni amalga oshirishingiz mumkin. Keyinroq plastik kartangiz sizga qulay vaqtda va joyda yetkazib beriladi",
-        section_card_5_title:"Hech qanday boshlang’ich to’lovlarsiz",
-        section_card_5_text:"Shunchaki mobil ilova orqali kartaga buyurtma bering va hamkorlik tarmog‘imizda xaridlarni amalga oshiring. Birinchi to'lovni faqat mahsulot xarid qilganingizdan bir oy o'tgach amalga oshirishingiz kerak",
-        section_card_6_title:"Kontaktsiz to’lovli qulay ilova",
-        section_card_6_text:"Mobil ilovada siz xamkor do’konlarimizning kataloglarini topishingiz, kartangiz qoldig’ini tekshirishingiz, muddatli to’lov jadvali bilan tanishishingiz, aksiya va chegirmalar haqida ma’lumot olishingiz va ko’plab boshqa narsalarni topishingiz mumkin",
-    
-        section_map_title:"Butun O’zbekiston bo’ylab hamkorlar tarmog’i ",
-        section_map_text1:"Hamkorlar mavjud viloyatlar",
-        section_map_text2:"Qamrab olish rejalashtirilayotgan viloyatlar",
-    
-        section_partners_title:"Hamkorlarimiz",
-        section_partners_link:"Barchasini ko’rish",
-    
-        footer_title:"Yana savollar bormi",
-        footer_text:"Biz ularga javob berishdan yoki kerakli ma'lumotlarni taqdim etishdan mamnun bo'lamiz.",
+        section_2_title:"Dunyoning istalgan nuqtasidan bank xizmatlaridan foydalanish imkoniyati",
+        section_2_text:"Open Banking mobil ilovasi – bu choʻntakdagi bankdir. Qayerda boʻlishingizdan qatʼi nazar, bank mahsulotlaridan foydalana olasiz",
+        section_2_item_1_text:"Toʻlov topshiriqnomasini tezkor tasdiqlash yoki rad etish",
+        section_2_item_1_title:"Toʻlovni tasdiqlash",
+        section_2_item_2_text:"Hech qanday navbatlarsiz va bankka bormasdan istalgan bank-hamkorda kredit ochish uchun ariza bering",
+        section_2_item_2_title:"Kreditga online ariza",
+        section_2_item_3_text:"Hisobvaraqlaringizga pul mablagʻlarining tushishi va ularning yechilishini kuzatib boring",
+        section_2_item_3_title:"Tranzaksiya tarixi",
+        section_2_item_4_text:"Korporativ kartalardan pullaringizning sarf etilishini nazorat qiling",
+        section_2_item_4_title:"Korporativ kartalar",
 
-        footer_link_1:"Hamkor bo'ling ",
-        footer_link_2:"Banklar uchun ma'lumot"
+        section_3_title:"Kompaniya haqida",
+        section_3_text: "ООО «FUTURE OPEN TECHNOLOGY GROUP» - Oʻzbekistondagi moliyaviy kompaniyalarga raqamlashtirish va integratsiya xizmatlarini koʻrsatishga ixtisoslashgan texnologiya kompaniyasi. Biz moliyaviy xizmatlar provayderlariga raqamli transformatsiyada muvaffaqiyat qozonishda, ularning bozordagi ishtirokini kengaytirishda va operatsion samaradorlikni oshirishda yordam beramiz. Biz raqamli xizmatlar yordamida O‘zbekistonning har bir rezidenti uchun hayotini oson va qulay qilish maqsadida har bir hamkorga individual yondoshgan holda yuqori sifatli moliyaviy mahsulotlarni yaratamiz. Bizning fikrimizcha, global rivojlanishni yangi texnologiyalarsiz va dunyoning har bir burchagida xizmat ko‘rsatish sifatini oshirmasdan bo‘lmaydi.",
+    
+        footer_title:"Bizga qoʻshiling !",
+        footer_adress: "Toshkent sh. , Afrosiyob k. 8А"
     },
     ru:{
-        nav_link_1:"предприятиям",
-        nav_link_2:"Банкам",
-        nav_link_3:"Торговым и сервисным предприятиям",
-        nav_link_4:"клиентам",
+        nav_link_1:"О продукте",
+        nav_link_2:"web приложение",
+        nav_link_3:"Мобильное приложение",
+        nav_link_4:"о компании",
+        nav_link_4:"Контакты",
 
 
-        header_title1:"Мгновенная покупка ",
-        header_title2:"без предоплат!",
-        header_text:"Приобретайте товары в рассрочку стоимостью до 50 000 000 сумм  без какой-либо предоплаты",
-        header_scan:"Скачать приложение",
+        header_title1:"Open Banking Единый пользовательский интерфейс для всех банков",
+        header_text:"Open Banking – это омниканальная платформа дистанционного банковского обслуживания юридических лиц и индивидуальных предпринимателей с доступом к услугам разных банков через единую точку входа",
 
-        download_btn:"Скачать приложение",
-
-        section_open_card_header:"OPENCARD это",
-        section_open_card_1_title:"месяцев",
-        section_open_card_1_body:"Рассрочка от 3 до 12  мес",
-        section_open_card_2_body:"Быстрое оформление",
-        section_open_card_3_body:"Лимит до 50 млн. сумм",
-        section_open_card_4_body:"Никакой предоплаты",
+        section_1_title_1:"Единое Web-приложение вместо нескольких интернет-банкингов",
+        section_1_text_1:"Web-приложение “Open Banking” - это удобный интерфейс, который упростить работу вашему бухгалтеру. Отпадает необходимость переключаться между разными интернет-банкингами, достаточно зайти в одно приложение и получить доступ ко всем расчетным счетам.",
+        section_1_title_2:"Проверка контрагента",
+        section_1_text_2:"Проверьте своего контрагента на благонадежность прежде, чем заключать договор",
+        section_1_title_3:"Доступ к справочной информации",
+        section_1_title_3:"Информация о курсах валют, ставке рефинансирования, МРОТ, БРВ и многое другое в одном месте ",
     
-        section_card_title:"Ваши возможности с картой",
-        section_card_1_title:"Оплата частями",
-        section_card_1_text:"Оплата производится равными частями. Период погашения рассрочки от 3 до 12 месяцев, в зависимости от условий наших партнеров, товара и его стоимости",
-        section_card_2_title:"Обслуживание карты всегда бесплатно",
-        section_card_2_text:"Выпуск карты, доставка курьером, пополнение карты и информирование совершенно бесплатно",
-        section_card_3_title1:"Высокие лимиты",
-        section_card_3_title2:"- до 50 млн. сум",
-        section_card_3_text:"Позвольте себе наслаждаться комфортной жизнью сейчас: путешествуйте, обновляйте свой гардероб, сделайте дома ремонт, приобретайте новую мебель, гаджеты или бытовую технику и многое другое. Теперь Вам не нужно долго копить, экономить или ограничивать себя в выборе. У нас Вы сможете приобрести товары стоимостью до 50 млн. сум без какой-либо предоплаты",
-        section_card_4_title:"Быстрое оформление и выпуск карты",
-        section_card_4_text:"Зарегистрируйтесь в мобильном приложении и закажите карту, для этого потребуется ввести серию и номер паспорта или ПИНФЛ. Мы быстро рассмотрим Вашу заявку и предоставим доступ к виртуальной карте рассрочке, что позволит Вам сразу же совершать покупки. Немного позже курьер доставит Вам пластиковую карту в удобное для Вас время и место.",
-        section_card_5_title:"Никакой предоплаты",
-        section_card_5_text:"Просто закажите карту через мобильное приложение и совершайте покупки в нашей партнерской сети. Первый платеж необходимо внести только через месяц после покупки",
-        section_card_6_title:"Удобное приложение с бесконтактной оплатой",
-        section_card_6_text:"В мобильном приложении Вы найдёте каталог магазинов-партнеров, сможете проверить баланс Вашей карты, ознакомиться с графиком погашения рассрочки, узнать об акциях и скидках и многое другое.",
+        section_2_title:"Доступ к банковским услугам из любой точки мира",
+        section_2_text:"Мобильное приложение Open Banking - это банк в кармане. У вас будет доступ к банковским продуктам, где бы вы не находились",
+        section_2_item_1_text:"Быстрое подтверждение или отклонение платежного поручения",
+        section_2_item_1_title:"Подтверждение платежа",
+        section_2_item_2_text:"Подайте заявку на открытие кредита в любом банке-партнере без очередей и похода в банк",
+        section_2_item_2_title:"Online-заявка на кредит",
+        section_2_item_3_text:"Отслеживайте поступления и списания денежных средств с ваших расчетных счетов",
+        section_2_item_3_title:"История транзакция",
+        section_2_item_4_text:"Контролируйте расход ваших денег с корпоративных карт",
+        section_2_item_4_title:"Корпоративные карты",
+        
+        section_3_title:"О компании",
+        section_3_text: "ООО «FUTURE OPEN TECHNOLOGY GROUP» — специализируется на оказании услуг по цифровизации и интеграции. Мы помогаем поставщикам финансовых услуг успешно осуществлять цифровую трансформацию, расширять свое присутствие на рынке и повышать операционную эффективность. Создаем качественные финансовые продукты с индивидуальным подходом к каждому партнёру. Верим, что глобальное развитие невозможно без новых технологий и улучшения качества сервиса.",
     
-        section_map_title:"Сеть партнеров по всему Узбекистану",
-        section_map_text1:"Регионы присутствия партнеров",
-        section_map_text2:"Планируемые регионы охвата",
-    
-        section_partners_title:"Наши партнеры",
-        section_partners_link:"Все партнеры",
-    
-        footer_title:"У вас еще остались вопросы?",
-        footer_text:"Мы с радостью ответим на них или предоставим необходимую информацию.",
-
-        footer_link_1:"Стать партнером",
-        footer_link_2:"Для банков"
-      }
+        footer_title:"Присоединяйтесь к нам !",
+        footer_adress: "г. Ташкент, ул. Афросиаб 8А"
+    }
 }
-
-
-export const partners = [
-    {
-        id:1,
-        image_url:"/images/partners1.png",
-    },
-    {
-        id:2,
-        image_url:"/images/partners2.png",
-    },
-    {
-        id:3,
-        image_url:"/images/partners4.png",
-    },
-    {
-        id:4,
-        image_url:"/images/partners5.png",
-    },
-    {
-        id:5,
-        image_url:"/images/partners3.png",
-    },
-    {
-        id:6,
-        image_url:"/images/partners6.png",
-    },
-    {
-        id:7,
-        image_url:"/images/partners7.png",
-    },
-    {
-        id:8,
-        image_url:"/images/partners8.png",
-    },
-    {
-        id:9,
-        image_url:"/images/partners2.png",
-    },
-    {
-        id:10,
-        image_url:"/images/partners5.png",
-    },
-    {
-        id:11,
-        image_url:"/images/partners4.png",
-    },
-    {
-        id:12,
-        image_url:"/images/partners6.png",
-    },
-]
