@@ -1,7 +1,6 @@
 // import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import { data } from "./data";
-import { partners } from "./data";
 import Link from "next/link";
 
 export default function Home() {
@@ -92,7 +91,7 @@ export default function Home() {
                   <Link href="/">{langData.nav_link_1}</Link>
                 </li>
                 <li className="ml-[25px]">
-                  <Link href="#web_app">{langData.nav_link_2}</Link>
+                  <Link href="http://91.213.99.139:3006/">{langData.nav_link_2}</Link>
                 </li>
                 <li className="ml-[25px]">
                   <Link href="#mobile_app">{langData.nav_link_3}</Link>
@@ -118,7 +117,7 @@ export default function Home() {
                   <Link href="/">{langData.nav_link_1}</Link>
                 </li>
                 <li className="ml-[10px] mt-4">
-                  <Link href="#web_app">{langData.nav_link_2}</Link>
+                  <Link href="http://91.213.99.139:3006/">{langData.nav_link_2}</Link>
                 </li>
                 <li className="ml-[10px] mt-4">
                   <Link href="#mobile_app">{langData.nav_link_3}</Link>
